@@ -1,4 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Fredoka+One&family=Poppins:wght@200&family=Righteous&family=Road+Rage&family=Roboto&display=swap');
 /* Style inputs, select elements and textareas */
+
 input[type=text],
 select,
 textarea {
@@ -10,6 +12,10 @@ textarea {
     resize: vertical;
 }
 
+form{
+    font-family: sans-serif;
+}
+
 /* Style the label to display next to the inputs */
 label {
     padding: 12px 12px 12px 80px;
@@ -17,8 +23,8 @@ label {
 }
 
 /* Style the submit button */
-input[type=submit] {
-    background-color: #04AA6D;
+.submit {
+    background-color: #384AEB;
     color: white;
     padding: 12px 20px;
     border: none;
@@ -26,6 +32,10 @@ input[type=submit] {
     cursor: pointer;
     /* float: right; */
     
+}
+
+.submit:hover{
+    background-color: #007BFF;
 }
 
 /* Style the container */
@@ -58,6 +68,8 @@ input[type=submit] {
 
 .user-form-title{
     text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
 }
 
 .hr-line {
@@ -72,6 +84,7 @@ input[type=submit] {
     background: #fff;
     padding: 0 10px;
     border-radius: 50%;
+    border: #000;
 }
 
 .fb {

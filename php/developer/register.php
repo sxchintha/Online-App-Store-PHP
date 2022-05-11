@@ -1,6 +1,6 @@
 <style>
     <?php
-    include $_SERVER['DOCUMENT_ROOT'] . '/online-app-store-php/css/form.css';
+    include $_SERVER['DOCUMENT_ROOT'] . '/store/css/form.css';
     ?>
 </style>
 
@@ -119,7 +119,7 @@
           <div class="row">
             <div class="col-25"></div>
             <div class="col-75">
-              <input type="submit" value="Submit" />
+              <button class="submit">Submit</button>
             </div>
           </div>
           <div class="hr-line">
