@@ -103,18 +103,6 @@
 </div>
 
 <script>
-    function submitForm() {
-        let password = document.getElementById('password').value;
-        let cpassword = document.getElementById('cpassword').value;
-
-        if (password === cpassword) {
-            document.registerForm.submit("actions/userRegister.php");
-        } else {
-            window.alert('Confirm password does not match!')
-        }
-
-    }
-
     var check = function() {
 
         let password = document.getElementById('password')

@@ -9,79 +9,70 @@
 
 <div class="container">
   <h2 class="user-form-title">Create new developer account</h2><br />
-  <form action="action_page.php">
+  <form action="./actions/developerRegister.php" method="POST" name="registerForm">
     <div class="row">
       <div class="col-25">
-        <label for="fname">First Name:</label>
+        <label for="First Name">First Name:</label>
       </div>
       <div class="col-75">
-        <input type="text" id="fname" name="firstname" placeholder="Your  first name.." required />
+        <input type="text" id="dfname" name="fname" placeholder="Your  first name.." required />
       </div>
     </div>
     <div class="row">
       <div class="col-25">
-        <label for="lname">Last Name:</label>
+        <label for="Last Name">Last Name:</label>
       </div>
       <div class="col-75">
-        <input type="text" id="lname" name="lastname" placeholder="Your last name.." required />
+        <input type="text" id="dlname" name="lname" placeholder="Your last name.." required />
       </div>
     </div>
     <div class="row">
       <div class="col-25">
-        <label for="fname">Email:</label>
+        <label for="Email">Email:</label>
       </div>
       <div class="col-75">
-        <input type="text" id="email" name="email" placeholder="Your email.." required />
+        <input type="email" id="demail" name="email" placeholder="Your email.." required />
       </div>
     </div>
     <div class="row">
       <div class="col-25">
-        <label for="fname">Password:</label>
+        <label for="Password">Password:</label>
       </div>
       <div class="col-75">
-        <input type="text" id="password" name="password" placeholder="Your password.." required />
+        <input type="password" id="dpassword" name="password" placeholder="Your password.." required required onkeyup='check();' />
       </div>
     </div>
     <div class="row">
       <div class="col-25">
-        <label for="fname">Confirm Password:</label>
+        <label for="Confirm Password">Confirm Password:</label><i id="dcheckPassIcon"></i>
       </div>
       <div class="col-75">
-        <input type="text" id="cpassword" name="cpassword" placeholder="Enter password again.." required />
+        <input type="password" id="dcpassword" name="cpassword" placeholder="Enter password again.." required onkeyup='check();' />
       </div>
     </div>
     <div class="row">
       <div class="col-25">
-        <label for="fname">Contact No:</label>
+        <label for="Contact">Contact No:</label>
       </div>
       <div class="col-75">
-        <input type="text" id="contact" name="contact" placeholder="Contact No.." required />
+        <input type="tel" id="dcontact" name="contact" placeholder="Contact No.." pattern="[0-9]{10}" />
       </div>
     </div>
 
-    <span></span>
-    <div class="row">
-      <div class="col-25">
-        <label for="fname"></label>
-      </div>
-      <!-- <div class="col-75">
-              <p>
-              </p>
-            </div> -->
-    </div>
+    <br>
     <div class="row">
       <div class="col-25">
         <label for="fname"></label>
       </div>
       <div class="col-75">
-        <input type="checkbox" name="tnc" style="margin-bottom: 15px" />
+        <input type="checkbox" name="tnc" style="margin-bottom: 15px" required />
         Accept Terms and Conditions
       </div>
     </div>
     <div class="row">
       <div class="col-25"></div>
       <div class="col-75">
-        <button class="submit">Submit</button>
+        <button id="dsubmitBtn" class="submit">Submit</button>
       </div>
     </div>
   </form>
@@ -110,3 +101,27 @@
   </div>
 
 </div>
+
+<script>
+    var check = function() {
+
+        let password = document.getElementById('dpassword')
+        let cpassword = document.getElementById('dcpassword')
+        let checkPassIcon = document.getElementById('dcheckPassIcon')
+        let submitBtn = document.getElementById('dsubmitBtn')
+
+        if (password.value == cpassword.value) {
+            cpassword.style.color = 'green';
+            cpassword.style.borderColor = 'green';
+            checkPassIcon.style.color = 'green';
+            checkPassIcon.className = 'far fa-check-circle'
+            submitBtn.disabled = false
+        } else {
+            cpassword.style.color = 'red';
+            cpassword.style.borderColor = 'red';
+            checkPassIcon.style.color = 'red';
+            checkPassIcon.className = 'fa fa-close'
+            submitBtn.disabled = true
+        }
+    }
+</script>

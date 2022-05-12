@@ -24,19 +24,19 @@ if (empty(trim($_POST["password"]))) {
     $password = trim($_POST["password"]);
 }
 
-$sql = "select `idcustomer`, `fname`, `lname`, `contact`, `email` from `customer` where `email`='$email' and `password`='$password'";
+$sql = "select `iddeveloper`, `fname`, `lname`, `contact`, `email` from `developer` where `email`='$email' and `password`='$password'";
 $result = $con->query($sql);
 
 if ($result->num_rows == 1) {
     $row = $result->fetch_assoc();
 
     $_SESSION["loggedin"] = true;
-    $_SESSION["SID"] = $row['idcustomer'];
+    $_SESSION["SID"] = $row['iddeveloper'];
     $_SESSION["fname"] = $row['fname'];
     $_SESSION["lname"] = $row['lname'];
     $_SESSION["contact"] = $row['contact'];
     $_SESSION["email"] = $row['email'];
-    $_SESSION["role"] = "user";
+    $_SESSION["role"] = "developer";
 
     echo "<script>window.location.href = '../profile.php';</script>";
 } else {
