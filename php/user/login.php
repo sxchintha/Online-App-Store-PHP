@@ -9,7 +9,7 @@
 
 <div class="container">
     <h2 class="user-form-title">User login</h2><br />
-    <form action="action_page.php">
+    <form action="./actions/userLogin.php" method="POST">
 
         <div class="row">
             <div class="col-25">
@@ -28,7 +28,7 @@
         </div>
         <div class="row">
             <div class="col-75 loginText">
-                <input type="text" id="password" name="password" placeholder="Your password.." required />
+                <input type="password" id="password" name="password" placeholder="Your password.." required />
             </div>
         </div>
         <br>

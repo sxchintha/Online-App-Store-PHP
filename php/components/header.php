@@ -27,7 +27,7 @@
     <div class="nav-items button-center">
 
         <!-- The Menu items -->
-        <li><a href="#">Home</a></li>
+        <li><a href="/store/online-app-store-php/">Home</a></li>
         <li>
             <div class="dropdown">
                 Categories
@@ -73,7 +73,7 @@
     <!-- login/profile button -->
     <div class="licon">
         <li>
-            <a href="#">
+            <a href="/store/online-app-store-php/php/login.php">
                 <i class="fas fa-user-circle
                         fa-2x" style="color: white;">
                 </i>

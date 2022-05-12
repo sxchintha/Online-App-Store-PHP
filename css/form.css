@@ -2,6 +2,9 @@
 /* Style inputs, select elements and textareas */
 
 input[type=text],
+input[type=password],
+input[type=tel],
+input[type=email],
 select,
 textarea {
     width: 100%;
