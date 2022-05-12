@@ -9,7 +9,7 @@
 
 <div class="container">
     <h2 class="user-form-title">Developer login</h2><br />
-    <form action="action_page.php">
+    <form action="./actions/developerLogin.php" method="POST">
 
         <div class="row">
             <div class="col-25">
@@ -18,7 +18,7 @@
         </div>
         <div class="row">
             <div class="col-75 loginText">
-                <input type="text" id="email" name="email" placeholder="Your email.." required />
+                <input type="text" id="demail" name="email" placeholder="Your email.." required />
             </div>
         </div>
         <div class="row">
@@ -28,7 +28,7 @@
         </div>
         <div class="row">
             <div class="col-75 loginText">
-                <input type="text" id="password" name="password" placeholder="Your password.." required />
+                <input type="password" id="dpassword" name="password" placeholder="Your password.." required />
             </div>
         </div>
         <br>

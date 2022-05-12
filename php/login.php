@@ -6,10 +6,7 @@ include './components/header.php';
 // Check if the user is already logged in, if yes then redirect to profile page
 if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true && !empty($_SESSION["SID"])) {
     echo "<script>window.location.href = './profile.php';</script>";
-    echo "Hi";
     exit;
-} else {
-    echo "Bye";
 }
 
 ?>

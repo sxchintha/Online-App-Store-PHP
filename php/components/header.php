@@ -71,13 +71,34 @@
     </div>
 
     <!-- login/profile button -->
-    <div class="licon">
-        <li>
-            <a href="/store/online-app-store-php/php/login.php">
-                <i class="fas fa-user-circle
-                        fa-2x" style="color: white;">
-                </i>
-            </a>
-        </li>
-    </div>
+    <?php
+    if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true && !empty($_SESSION["SID"])) {
+        echo '
+            <div class="licon">
+                <li>
+                    <a href="/store/online-app-store-php/php/profile.php">
+                        <i class="fas fa-user-circle
+                                fa-2x" style="color: white;">
+                        </i>
+                    </a>
+                </li>
+            </div>
+            <div class="borderLog">
+                <li>
+                    <a href="/store/online-app-store-php/php/actions/logout.php">Logout</a>
+                </li>
+            </div>
+            ';
+    } else {
+        echo '
+            <div class="borderLog" style="padding-left: 15px">
+                <li>
+                    <a href="/store/online-app-store-php/php/login.php">Login</a>
+                </li>
+            </div>
+            ';
+    }
+
+
+    ?>
 </nav>

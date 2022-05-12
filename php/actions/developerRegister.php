@@ -16,8 +16,8 @@ $cpassword = $_POST['cpassword'];
 
 
 // Check for duplicate email or password
-$chkDuplicateEmail = mysqli_query($con, "select * from customer where email='$email' ");
-$chkDuplicateContact = mysqli_query($con, "select * from customer where contact='$contact' ");
+$chkDuplicateEmail = mysqli_query($con, "select * from developer where email='$email' ");
+$chkDuplicateContact = mysqli_query($con, "select * from developer where contact='$contact' ");
 
 if (mysqli_num_rows($chkDuplicateEmail) > 0) {
     echo "<script> alert ('The EMAIL you have entered is already taken!'); </script>";
@@ -29,7 +29,7 @@ if (mysqli_num_rows($chkDuplicateEmail) > 0) {
 
     //insert data
 
-    $sql = "insert into customer(fname,lname,contact,password,email) values('$firstname','$lastname','$contact','$password','$email')";
+    $sql = "insert into developer(fname,lname,contact,password,email) values('$firstname','$lastname','$contact','$password','$email')";
 
     if (mysqli_query($con, $sql)) {
         echo "<script> alert ('User successfully registered.');</script>";
