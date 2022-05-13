@@ -20,7 +20,7 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true && !empty($_S
 
 <div class="row">
     <div class="userSelectColumn" style="text-align: center;">
-        <img src="../img/login.png">
+        <img src="../img/login2.gif" style="width:300px">
         <h3 style="text-align: center;">Select the desired profile type</h3><br>
         <div class="tab button-center">
             <button class="tablinks" id="defaultOpen" onclick="openForm(event, 'userTab')">User</button>
