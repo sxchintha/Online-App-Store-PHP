@@ -1,127 +1,100 @@
-    <?php
+<?php
 session_start();
 include './components/header.php';
 ?>
 
 <style>
-    <?php
-    include $_SERVER['DOCUMENT_ROOT'] . '/store/online-app-store-php/css/adListing.css';
-    ?>
+  <?php
+  include $_SERVER['DOCUMENT_ROOT'] . '/store/online-app-store-php/css/adListing.css';
+  ?>
 </style>
-    
-    <h1 class="add-listing-heading">Store Listing</h1><br/>
-    <form class="listing-form">
-      <div class="form-content">
-          <br/>
-        <h3>Categorization</h3>
-<br/>
-        <div class="border">
-          <div class="row">
-            <div class="col-25">
-              <label for="fname">Application Type:</label>
-            </div>
-            <div class="col-75">
-              <select name="cars" id="cars">
-                <option value="volvo">APK</option>
-                <option value="saab">Saab</option>
-                <option value="opel">Opel</option>
-                <option value="audi">Audi</option>
-              </select>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-25">
-              <label for="fname">Category:</label>
-            </div>
-            <div class="col-75">
-              <select name="cars" id="cars">
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="opel">Opel</option>
-                <option value="audi">Audi</option>
-              </select>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-25">
-              <label for="fname">Content Rating</label>
-            </div>
-            <div class="col-75">
-              <select name="cars" id="cars">
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="opel">Opel</option>
-                <option value="audi">Audi</option>
-              </select>
-            </div>
-          </div>
-        </div><br/>
 
-        <h3>Upload Application</h3><br/>
-        <div class="border">
-          <div class="upApk">
-            <label>Title</label><br />
-            <input type="text" class="title-box" /><br /><br />
-            <label for="lname">Description</label><br />
-            <textarea class="description-box"></textarea><br /><br />
-            <label>Default Language</label><br />
-            <select name="cars" id="cars">
-              <option value="volvo">Volvo</option>
-              <option value="saab">Saab</option>
-              <option value="opel">Opel</option>
-              <option value="audi">Audi</option></select
-            ><br /><br />
-            <label>Upload APK</label><br />
-            <input type="file" id="myFile" name="filename" /><br />
-          </div>
-        </div><br/>
-
-        <h3>Contact Details</h3>
-        <br/>
-        <div class="border">
-          <div class="row">
-            <div class="col-25">
-              <label for="fname">Application Type:</label>
-            </div>
-            <div class="col-75">
-              <select name="cars" id="cars">
-                <option value="volvo">APK</option>
-                <option value="saab">Saab</option>
-                <option value="opel">Opel</option>
-                <option value="audi">Audi</option>
-              </select>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-25">
-              <label for="fname">Category:</label>
-            </div>
-            <div class="col-75">
-              <select name="cars" id="cars">
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="opel">Opel</option>
-                <option value="audi">Audi</option>
-              </select>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-25">
-              <label for="fname">Content Rating</label>
-            </div>
-            <div class="col-75">
-              <select name="cars" id="cars">
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="opel">Opel</option>
-                <option value="audi">Audi</option>
-              </select>
-            </div>
-          </div>
+<h1 class="add-listing-heading">Store Listing</h1><br />
+<form class="listing-form" method="POST" action="actions/addListing.php" enctype="multipart/form-data">
+  <div class="form-content">
+    <br />
+    <h3>Categorization</h3>
+    <br />
+    <div class="border">
+      <div class="row">
+        <div class="col-25">
+          <label for="application type">Application Type :</label>
+        </div>
+        <div class="col-75">
+          <select name="applicationtype" id="applicationtype" required>
+            <option value="" disabled selected hidden>Choose type</option>
+            <option value="PC">PC</option>
+            <option value="Mobile">Mobile</option>
+          </select>
         </div>
       </div>
-      <br />
-      <div class="center">
-        <button class="publish-button">Publish</button>
+      <div class="row">
+        <div class="col-25">
+          <label for="category">Category :</label>
+        </div>
+        <div class="col-75">
+          <select name="category" id="category" required>
+            <option value="" disabled selected hidden>Choose category</option>
+            <option value="Banking">Banking</option>
+            <option value="Communication">Communication</option>
+            <option value="Game">Game</option>
+            <option value="Productivity">Productivity</option>
+          </select>
+        </div>
       </div>
-    </form>
+    </div><br />
+
+    <h3>Upload Application</h3><br />
+    <div class="border">
+      <div class="upApk">
+        <label for="title">Title</label><br />
+        <input type="text" class="title-box" name="title" required /><br /><br />
+        <label for="description">Description</label><br />
+        <textarea class="description-box" name="description" required></textarea><br /><br />
+        <label>Default Language</label><br />
+        <select name="language" id="language" required>
+          <option value="" disabled selected hidden>Choose language</option>
+          <option value="English">English</option>
+          <option value="Sinhala">Sinhala</option>
+        </select><br /><br />
+        <label>Image</label><br />
+        <input type="file" id="imageToUpload" name="imageToUpload" required /><br /><br />
+        <label>Upload APK</label><br />
+        <input type="file" id="fileToUpload" name="fileToUpload" required /><br />
+      </div>
+    </div><br />
+
+    <h3>Contact Details</h3>
+    <br />
+    <div class="border">
+      <div class="row">
+        <div class="col-25">
+          <label for="website">Website :</label>
+        </div>
+        <div class="col-75">
+          <input type="text" class="title-box" name="website" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="email">E-mail:</label>
+        </div>
+        <div class="col-75">
+          <input type="email" class="title-box" name="email" required />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="cotact">Contact No. :</label>
+        </div>
+        <div class="col-75">
+          <input type="tel" class="title-box" name="contact" pattern="[0-9]{10}" required />
+        </div>
+      </div>
+    </div>
+  </div>
+  <br />
+  <div class="center">
+    <button class="publish-button">Publish</button>
+  </div>
+</form>
