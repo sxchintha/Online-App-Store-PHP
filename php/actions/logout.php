@@ -8,6 +8,6 @@ $_SESSION = array();
 // Destroy the session.
 session_destroy();
  
-// Redirect to login page
+// Redirect to home page
 header("location: ../../index.php");
 exit;

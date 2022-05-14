@@ -1,12 +1,16 @@
 <?php
 session_start();
 
+// Check the method of the request
+// If request methot is not POST redirect to the register page
 if ($_SERVER["REQUEST_METHOD"] != "POST") {
     header("location: ../register.php");
 }
 
+// include the database config file
 include_once '../db/config.php';
 
+// get all data that have been received from post method
 $firstname = $_POST['fname'];
 $lastname = $_POST['lname'];
 $contact = $_POST['contact'];
@@ -27,8 +31,7 @@ if (mysqli_num_rows($chkDuplicateEmail) > 0) {
     echo "<script> history.back(); </script>";
 } else {
 
-    //insert data
-
+    // insert data to database
     $sql = "insert into developer(fname,lname,contact,password,email) values('$firstname','$lastname','$contact','$password','$email')";
 
     if (mysqli_query($con, $sql)) {

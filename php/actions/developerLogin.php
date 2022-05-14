@@ -1,10 +1,13 @@
 <?php
 session_start();
 
+// Check the method of the request
+// If request methot is not POST redirect to the login page
 if ($_SERVER["REQUEST_METHOD"] != "POST") {
     header("location: ../login.php");
 }
 
+// include the database config file
 include_once '../db/config.php';
 
 
@@ -24,12 +27,14 @@ if (empty(trim($_POST["password"]))) {
     $password = trim($_POST["password"]);
 }
 
+// Check if the user is exists in the database
 $sql = "select `iddeveloper`, `fname`, `lname`, `contact`, `email` from `developer` where `email`='$email' and `password`='$password'";
 $result = $con->query($sql);
 
 if ($result->num_rows == 1) {
     $row = $result->fetch_assoc();
 
+    // Set session variables
     $_SESSION["loggedin"] = true;
     $_SESSION["SID"] = $row['iddeveloper'];
     $_SESSION["fname"] = $row['fname'];
