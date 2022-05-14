@@ -64,7 +64,7 @@
 
     <!-- search bars -->
     <div class="searchbar">
-        <input type="text" placeholder="Search">
+        <input type="text" placeholder="Search" name="search">
         <div class="icon">
             <i class="fas fa-search"></i>
         </div>

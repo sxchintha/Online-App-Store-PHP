@@ -15,8 +15,11 @@ $language = $_POST['language'];
 $website = $_POST['website'];
 $email = $_POST['email'];
 $contact = $_POST['contact'];
-// $developerid =  $_SESSION["SID"];
-$developerid =  1;
+
+date_default_timezone_set("Asia/Colombo");
+$posteddate = date("c");
+$lastupdated = date("c");
+$developerid =  $_SESSION["SID"];
 
 $filename = $_FILES['fileToUpload']['name'];
 $imagename = $_FILES['imageToUpload']['name'];
@@ -24,8 +27,8 @@ $imagename = $_FILES['imageToUpload']['name'];
 $fileExtention = pathinfo($filename, PATHINFO_EXTENSION);
 $imageExtention = pathinfo($imagename, PATHINFO_EXTENSION);
 
-if (!in_array($imageExtention, ['jpg', 'jpeg', 'png'])) {
-    echo "<script> alert ('Image extension must be .jpg or .png'); </script>";
+if (!in_array($imageExtention, ['jpg', 'jpeg', 'png', 'webp'])) {
+    echo "<script> alert ('Image extension must be .jpg, .webp or .png'); </script>";
     echo "<script> history.back(); </script>";
 } elseif (!in_array($fileExtention, ['zip', 'exe'])) {
     echo "<script> alert ('File extension must be .zip, .exe or .apk'); </script>";
@@ -44,12 +47,12 @@ if (!in_array($imageExtention, ['jpg', 'jpeg', 'png'])) {
             $filesize = $_FILES['fileToUpload']['size'];
 
             $sql = "insert into app
-            (title, description, type, category, language, filename, imagename, filesize, downloads, website, email, contact, developer) 
-            values('$title', '$description', '$type', '$category', '$language', '$fileNewName', '$imageNewName', $filesize, 0, '$website', '$email', '$contact', $developerid);";
+            (title, description, type, category, language, filename, imagename, filesize, downloads, website, email, contact, developer, posteddate, lastupdated, stars, ratecount) 
+            values('$title', '$description', '$type', '$category', '$language', '$fileNewName', '$imageNewName', $filesize, 0, '$website', '$email', '$contact', $developerid, '$posteddate', '$lastupdated', 0, 0);";
 
             if (mysqli_query($con, $sql)) {
                 echo "<script> alert ('Application successfully listed.');</script>";
-                echo "<script>window.location.href = '../../index.php';</script>";
+                echo "<script>window.location.href = '../profile.php';</script>";
             } else {
                 echo "<script> alert ('Error! Please try again.');</script>";
                 echo "<script> history.back(); </script>";

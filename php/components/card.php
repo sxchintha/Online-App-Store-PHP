@@ -1,13 +1,15 @@
-<style>
-    <?php
-    include $_SERVER['DOCUMENT_ROOT'] . '/online-app-store-php/css/card.css';
-    ?>
-</style>
-
-
 <div class="card">
-      <img src="../../img/app.jpg" alt="Avatar" style="width: 100%" class="img" />
-      <div class="container">
-        <h4 class="card-title"><b>App Name</b></h4>
-        <p>Architect & Engineer</p>
-      </div>
+  <img src="./uploads/images/<?php echo $app['imagename'] ?>" alt="Avatar" style="width: 100%" class="img" />
+  <div class="container">
+    <h4 class="card-title"><b><?php echo $app['title'] ?></b></h4>
+    <p>Rating: 
+      <?php 
+        if($app['ratecount'] == 0) {
+          echo 0;
+        } else {
+          echo round($app['stars']/$app['ratecount'], 1);
+        }
+      ?>
+    </p>
+  </div>
+</div>
