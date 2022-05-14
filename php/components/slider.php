@@ -25,9 +25,9 @@
   <span class="dot"></span>
 </div>
 
-<footer>
+<!-- <footer>
   <p>About Us<br /></p>
-</footer>
+</footer> -->
 <script>
   let slideIndex = 0;
   showSlides();

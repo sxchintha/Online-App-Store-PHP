@@ -216,7 +216,7 @@ label {
 /* Create columns that floats next to each other */
 .userSelectColumn {
     float: left;
-    width: 40%;
+    width: 25%;
     padding: 100px;
 }
 

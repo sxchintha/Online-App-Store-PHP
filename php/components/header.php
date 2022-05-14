@@ -19,7 +19,7 @@
 </script>
 
 
-<nav>
+<nav class="all">
     <div class="logo">
         Klick Store
     </div>

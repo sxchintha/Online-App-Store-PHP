@@ -5,6 +5,7 @@
     width: 200px;
     height: 250px;
     border-radius: 5px;
+    
 }
 
 /* On mouse-over, add a deeper shadow */
@@ -15,6 +16,9 @@
 /* Add some padding inside the card container */
 .container {
     padding: 2px 16px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
 }
 
 .card-title {
