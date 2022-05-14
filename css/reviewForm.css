@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Fredoka+One&family=Montserrat&family=Poppins:wght@200&family=Righteous&family=Road+Rage&display=swap');
+
+.Rcard{
+    border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        width: 800px;
+        margin-left: 400px;
+        font-family: 'Montserrat', sans-serif;
+        padding: 20px;
+}
+
+.rating-input{
+    width: 400px;
+    height: 50px;
+    
+   
+}
+
+/* .card-details{
+padding-left: 50px;
+} */
+
+.review-textA{
+    width: 400px;
+}
+
+.publish-button {
+    background-color: #007BFF;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.center {
+    padding-left: 180px;
+}
+
+.review-title{
+    text-align: center;
+    padding-left: 100px;
+    font-family: 'Montserrat', sans-serif;
+}

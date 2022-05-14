@@ -45,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && !empty($_GET['search'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/main.css">
+    <!-- <link rel="stylesheet" href="./css/main.css"> -->
     <title>Klick Store</title>
 </head>
 
@@ -55,27 +55,33 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && !empty($_GET['search'])) {
     ?>
 
     <h1>New + Update</h1>
+    <section>
     <?php
     while ($app = $newapps->fetch_assoc()) {
-        include './php/components/card.php';
+        include './php/components/newCard.php';
     }
     ?>
+    </section>
     <br>
 
     <h1>Social Networks</h1>
+    <section>
     <?php
     while ($app = $socialapps->fetch_assoc()) {
-        include './php/components/card.php';
+        include './php/components/newCard.php';
     }
     ?>
+    </section>
     <br>
 
     <h1>Recommended for you</h1>
+    <section>
     <?php
     while ($app = $recommendeds->fetch_assoc()) {
-        include './php/components/card.php';
+       include './php/components/newCard.php';
     }
     ?>
+    </section>
 </body>
 
 </html>
