@@ -1,0 +1,25 @@
+.flex-container {
+    display: flex;
+   
+}
+
+.flex-child {
+    flex: 1;
+    padding: 20px;
+}
+
+.flex-child:first-child {
+    margin-right: 20px;
+}
+
+.second{
+    padding-left: 350px;
+}
+
+.item-title{
+    padding-left:150px;
+}
+
+.review-title{
+    text-align: center;
+}
