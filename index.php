@@ -1,6 +1,6 @@
 <?php
 session_start();
-include './php/components/header.php';
+include './php/components/newNav.php';
 require './php/db/config.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "GET" && !empty($_GET['search'])) {
