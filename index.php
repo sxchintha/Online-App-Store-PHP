@@ -8,26 +8,26 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && !empty($_GET['search'])) {
 } else {
 
     // Get 5 latest updated apps
-    $newappssql = "SELECT title, imagename, stars, ratecount
+    $newappssql = "SELECT idapp, title, imagename, stars, ratecount
                     FROM app 
                     ORDER BY lastupdated DESC 
                     LIMIT 5";
 
     // Get 5 apps where the category is communication
-    $socialappssql = "SELECT title, imagename, stars, ratecount
+    $socialappssql = "SELECT idapp, title, imagename, stars, ratecount
                         FROM app 
                         where category = 'Communication'
                         ORDER BY idapp DESC 
                         LIMIT 5";
 
     // Get 5 random apps
-    $recommendedsql = "SELECT title, imagename, stars, ratecount
+    $recommendedsql = "SELECT idapp, title, imagename, stars, ratecount
                         FROM app AS r1 JOIN
                         (SELECT CEIL(RAND() *
                         (SELECT MAX(idapp)
-                        FROM app)) AS idapp)
+                        FROM app)) AS id)
                         AS r2
-                        WHERE r1.idapp >= r2.idapp
+                        WHERE r1.idapp >= r2.id
                         ORDER BY r1.idapp ASC
                         LIMIT 5";
 
@@ -56,31 +56,31 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && !empty($_GET['search'])) {
 
     <h1>New + Update</h1>
     <section>
-    <?php
-    while ($app = $newapps->fetch_assoc()) {
-        include './php/components/newCard.php';
-    }
-    ?>
+        <?php
+        while ($app = $newapps->fetch_assoc()) {
+            include './php/components/newCard.php';
+        }
+        ?>
     </section>
     <br>
 
     <h1>Social Networks</h1>
     <section>
-    <?php
-    while ($app = $socialapps->fetch_assoc()) {
-        include './php/components/newCard.php';
-    }
-    ?>
+        <?php
+        while ($app = $socialapps->fetch_assoc()) {
+            include './php/components/newCard.php';
+        }
+        ?>
     </section>
     <br>
 
     <h1>Recommended for you</h1>
     <section>
-    <?php
-    while ($app = $recommendeds->fetch_assoc()) {
-       include './php/components/newCard.php';
-    }
-    ?>
+        <?php
+        while ($app = $recommendeds->fetch_assoc()) {
+            include './php/components/newCard.php';
+        }
+        ?>
     </section>
 </body>
 

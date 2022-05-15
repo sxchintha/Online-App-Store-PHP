@@ -1,6 +1,6 @@
 <?php
 session_start();
-include './components/header.php';
+include './components/newNav.php';
 
 // Check login status
 if (!isset($_SESSION["loggedin"]) && !$_SESSION["loggedin"] === true && empty($_SESSION["SID"])) {
