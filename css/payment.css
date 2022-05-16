@@ -65,7 +65,9 @@
     border-radius: 3px;
 }
 
-input[type="text"] {
+input[type="text"],
+input[type="number"],
+input[type="email"] {
     width: 100%;
     margin-bottom: 20px;
     padding: 12px;

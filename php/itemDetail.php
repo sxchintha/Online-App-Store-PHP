@@ -54,7 +54,7 @@
          <li>Type: <?php echo $app['type'] ?></li>
          <li>Category: <?php echo $app['category'] ?></li>
          <li>Language: <?php echo $app['language'] ?></li>
-         <li>Size: <?php echo $app['filesize'] ?></li>
+         <li>Size: <?php echo round($app['filesize'] / 1000000, 2) ?> MB</li>
          <li>Downloads: <?php echo $app['downloads'] ?></li>
          <li>Rating: <?php if ($app['ratecount'] == 0) {
                         echo 0;
@@ -67,6 +67,48 @@
          <li>Last updated on: <?php echo $app['lastupdated'] ?></li>
          <li>Posted on: <?php echo $app['posteddate'] ?></li>
        </ul>
+
+
+       <!-- If app is free, show download button
+            otherwise show app price -->
+       <?php
+        if ($app['price'] == 0) {
+          echo '
+          <form action="./actions/downloadfile.php" method="POST">
+            <input type="hidden" name="itemid" value="' . $itemid . '">
+            <input type="submit" value="Download">
+          </form>
+          ';
+        } else if (empty($_SESSION["SID"])) {
+          echo '
+            <form action="./payment.php" method="POST">
+              <input type="hidden" name="itemid" value="' . $itemid . '">
+              <input type="submit" value="$' . $app['price'] . '">
+            </form>
+            ';
+        } else {
+          $userid = $_SESSION['SID'];
+          $userrole = $_SESSION['role'];
+          $checkPayed = "SELECT EXISTS(SELECT * from payment WHERE appid=$itemid and userid=$userid and userrole='$userrole') as paid";
+          $result = mysqli_fetch_assoc(mysqli_query($con, $checkPayed));
+
+          if ($result['paid'] == 0) {
+            echo '
+            <form action="./payment.php" method="POST">
+              <input type="hidden" name="itemid" value="' . $itemid . '">
+              <input type="submit" value="$' . $app['price'] . '">
+            </form>
+            ';
+          } else {
+            echo '
+            <form action="./actions/downloadfile.php" method="POST">
+              <input type="hidden" name="itemid" value="' . $itemid . '">
+              <input type="submit" value="Download">
+            </form>
+            ';
+          }
+        }
+        ?>
      </div>
    </div>
    <div class="review-container">
@@ -81,7 +123,7 @@
  <!-- Get item reviews -->
  <?php
 
-  $reviewsql = "SELECT userid, `subject`, country, rating, comment
+  $reviewsql = "SELECT userid, `subject`, country, rating, comment, userrole
               FROM appreview
               WHERE appid = $itemid;";
 
@@ -90,19 +132,24 @@
  <?php
   while ($review = $reviews->fetch_assoc()) {
     $reviewerid = $review['userid'];
-    $usersql = "SELECT fname, lname
+    if ($review['userrole'] == 'user') {
+      $usersql = "SELECT fname, lname
                 FROM customer
                 WHERE idcustomer = $reviewerid";
+    } else {
+      $usersql = "SELECT fname, lname
+                FROM developer
+                WHERE iddeveloper = $reviewerid";
+    }
     $userdetails = $con->query($usersql);
     $user = $userdetails->fetch_assoc();
   ?>
 
-   <h1><?php echo $review['subject']; ?></h1> <!-- Review title subject -->
-   <p><?php echo $user['fname'] . ' ' . $user['lname'] ?></p> <!-- name of the author of the review -->
-   <p><?php echo $review['country'] ?></p> <!-- Country -->
-   <p>Rating: <?php echo $review['rating'] ?></p> <!-- Rating -->
-   <p><?php echo $review['comment'] ?></p><!-- Comment -->
+   <h1><?php echo $review['subject']; ?></h1> <!-- For Review title subject -->
+   <p><?php echo $user['fname'] . ' ' . $user['lname'] ?></p> <!-- for the name of the reviewer -->
+   <p><?php echo $review['country'] ?></p> <!-- for Country of the reviewer -->
+   <p>Rating: <?php echo $review['rating'] ?></p> <!-- for Rating -->
+   <p><?php echo $review['comment'] ?></p><!-- for Comment -->
  <?php
   }
   ?>
- </table>

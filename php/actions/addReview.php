@@ -26,10 +26,11 @@ if ($result->num_rows == 1) {
     $newStars = (int)$app['stars'] + (int)$rating;
     $newratecount = (int)$app['ratecount'] + 1;
     $userid = $_SESSION['SID'];
+    $userrole = $_SESSION['role'];
 
     // Add review to the database and update the star count
-    $addsql = "insert into appreview(userid, appid, subject, country, rating, comment) 
-            values('$userid', '$itemid', '$subject', '$country', '$rating', '$comment');";
+    $addsql = "insert into appreview(userid, appid, subject, country, rating, comment, userrole) 
+            values('$userid', '$itemid', '$subject', '$country', '$rating', '$comment', '$userrole');";
     $addsql .= "update app set stars = $newStars, ratecount = $newratecount where idapp = $itemid;";
 
     if (mysqli_multi_query($con, $addsql)) {

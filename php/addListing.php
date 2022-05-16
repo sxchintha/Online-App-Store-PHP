@@ -57,6 +57,11 @@ include './components/newNav.php';
           <option value="English">English</option>
           <option value="Sinhala">Sinhala</option>
         </select><br /><br />
+        <label for="Price">Price</label><br>
+        <input type="radio" id="freeradio" name="price" value="free"  onchange="setFree()"><label for="pric" checked>Free</label>
+        <input type="radio" id="paidradio" name="price" value="paid" onchange="setPrice()"><label for="pric">Paid</label>
+        <input type="number" id="appprice" name="appprice" required class="title-box" value="0" >
+        <br><br>
         <label>Image</label><br />
         <input type="file" id="imageToUpload" name="imageToUpload" required /><br /><br />
         <label>Upload APK</label><br />
@@ -98,3 +103,15 @@ include './components/newNav.php';
     <button class="publish-button">Publish</button>
   </div>
 </form>
+
+<script>
+  var freebtn = document.getElementById('freeradio').checked
+  var appprice = document.getElementById('appprice').disabled
+
+  function setFree() {
+    document.getElementById("appprice").disabled = true;
+  }
+  function setPrice() {
+    document.getElementById("appprice").disabled = false;
+  }
+</script>

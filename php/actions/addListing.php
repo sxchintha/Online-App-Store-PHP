@@ -19,6 +19,13 @@ $language = $_POST['language'];
 $website = $_POST['website'];
 $email = $_POST['email'];
 $contact = $_POST['contact'];
+$priceset = $_POST['price'];
+
+if($priceset == 'free') {
+    $price = 0;
+} else {
+    $price = $_POST['appprice'];
+}
 
 // set the default time zone to Asia/Colombo
 date_default_timezone_set("Asia/Colombo");
@@ -58,8 +65,8 @@ if (!in_array($imageExtention, ['jpg', 'jpeg', 'png', 'webp'])) {
 
             // Insert app data to database
             $sql = "insert into app
-            (title, description, type, category, language, filename, imagename, filesize, downloads, website, email, contact, developer, posteddate, lastupdated, stars, ratecount) 
-            values('$title', '$description', '$type', '$category', '$language', '$fileNewName', '$imageNewName', $filesize, 0, '$website', '$email', '$contact', $developerid, '$posteddate', '$lastupdated', 0, 0);";
+            (title, description, type, category, language, filename, imagename, filesize, downloads, website, email, contact, developer, posteddate, lastupdated, stars, ratecount, price) 
+            values('$title', '$description', '$type', '$category', '$language', '$fileNewName', '$imageNewName', $filesize, 0, '$website', '$email', '$contact', $developerid, '$posteddate', '$lastupdated', 0, 0, $price);";
 
             if (mysqli_query($con, $sql)) {
                 echo "<script> alert ('Application successfully listed.');</script>";
