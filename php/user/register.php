@@ -39,7 +39,7 @@
                 <label for="Password">Password:</label>
             </div>
             <div class="col-75">
-                <input type="password" id="password" name="password" placeholder="Your password.." required required onkeyup='check();' />
+                <input type="password" id="password" name="password" placeholder="Your password.." required onkeyup='check();' />
             </div>
         </div>
         <div class="row">
