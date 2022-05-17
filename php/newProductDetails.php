@@ -33,7 +33,7 @@ if ($result->num_rows == 1) {
     <main class="container">
       <div class="left-column">
         <section>
-          <a href="#">
+          
             <article class="card">
               <figure class="card-img">
                 <img src="../uploads/images/<?php echo $app['imagename'] ?>" />
@@ -44,7 +44,7 @@ if ($result->num_rows == 1) {
                 <a href="./reviewForm.php?itemid=<?php echo $itemid ?>" class="edit-button">Rate app</a>
               </div>
             </article>
-          </a>
+         
         </section>
       </div>
 
