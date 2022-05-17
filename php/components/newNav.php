@@ -1,59 +1,70 @@
 <style>
-    <?php
-    include $_SERVER['DOCUMENT_ROOT'] . '/store/online-app-store-php/css/newNav.css';
-    ?>
+  <?php
+  include $_SERVER['DOCUMENT_ROOT'] . '/store/online-app-store-php/css/newNav.css';
+  ?>
 </style>
 
-<script>
-    <?php
-    include $_SERVER['DOCUMENT_ROOT'] . '/store/online-app-store-php/js/newNav.js';
-    ?>
-</script>
-
-
 <!-- font awesome link  -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-    />
-    <script src="../../js/newNav.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
 
+<header class="headAll">
+  <div class="header-1">
+    <a href="/store/online-app-store-php/" class="logo"><i class="fas fa-store"></i>KLICK STORE</a>
 
+    <form action="" class="search-box-container">
+      <input type="search" id="search-box" placeholder="Search here..." />
+      <label for="search-box" class="fas fa-search"></label>
+    </form>
+  </div>
 
-<div class="header-all">
-<html lang="en">
-  <body>
-    
-      <header class="headAll">
-        <div class="header-1">
-          <a href="" class="logo"><i class="fas fa-store"></i>KLICK STORE</a>
+  <div class="header-2" id="header-2">
+    <div id="menu-bar" class="fas fa-bars"></div>
 
-          <form action="" class="search-box-container">
-            <input type="search" id="search-box" placeholder="search here..." />
-            <label for="search-box" class="fas fa-search"></label>
-          </form>
-        </div>
-
-        <div class="header-2">
-          <div id="menu-bar" class="fas fa-bars"></div>
-
-          <nav class="navbar">
-            <a href="#home">home</a>
-            <a href="#home">category</a>
-            <a href="#home">product</a>
-            <a href="#home">deal</a>
-            <a href="#home">contact</a>
-          </nav>
-          <div class="icons">
-            <a href="#" class="fas fa-shopping-cart"></a>
-            <a href="#" class="fas fa-heart"></a>
-            <a href="#" class="fas fa-user-circle"></a>
-          </div>
-        </div>
-      </header>
+    <nav class="navbar" id="navbar">
+      <a href="/store/online-app-store-php/">home</a>
+      <a href="#home">category</a>
+      <a href="#home">product</a>
+      <a href="#home">deal</a>
+      <a href="#home">contact</a>
+    </nav>
+    <!-- login/profile button -->
+    <div class="icons">
+      <?php
+      if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true && !empty($_SESSION["SID"])) {
+        echo '
+            <a href="/store/online-app-store-php/php/profile.php" class="fas fa-user-circle"></a>
+            <a href="/store/online-app-store-php/php/actions/logout.php" class="btn">Logout</a>
+            ';
+      } else {
+        echo '
+            <a href="/store/online-app-store-php/php/login.php" class="btn">login</a>
+            ';
+      }
+      ?>
     </div>
-      
-    <!-- custom js link  -->
-    <script src="newNav.js"></script>
-  </body>
-</html>
+  </div>
+</header>
+
+<!-- custom js link  -->
+<script>
+  let menu = document.getElementById('menu-bar');
+  let navbar = document.getElementById('navbar');
+  let header = document.getElementById('header-2');
+
+  menu.addEventListener('click', () => {
+    menu.classList.toggle('fa-times');
+    navbar.classList.toggle('active');
+  });
+
+  window.onscroll = () => {
+    menu.classList.remove('fa-times');
+    navbar.classList.remove('active');
+
+    if (window.scrollY > 100) {
+      header.classList.add('active');
+    } else {
+      header.classList.remove('active');
+    }
+
+  }
+</script>

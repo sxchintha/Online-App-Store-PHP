@@ -10,6 +10,11 @@
     text-decoration: none;
     text-transform: capitalize;
     transition: all .2s linear;
+    font-size: 55.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 6.5rem;
+    scroll-behavior: smooth;
+    text-decoration: none;
 }
 
 :root {
@@ -22,24 +27,16 @@
     color: #fff;
 }
 
-html {
-    font-size: 55.5%;
-    overflow-x: hidden;
-    scroll-padding-top: 6.5rem;
-    scroll-behavior: smooth;
-    text-decoration: none;
-}
-
 .header-1 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2rem 9%;
+    padding: 1.5rem 9%;
     background-color: #eee;
 }
 
 .header-1 .logo {
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: var(--black);
     font-weight: bolder;
     text-decoration: none;
@@ -52,7 +49,7 @@ html {
 
 .header-1 .search-box-container {
     display: flex;
-    height: 5rem;
+    height: 3rem;
 }
 
 .header-1 .search-box-container #search-box {
@@ -61,7 +58,7 @@ html {
     padding: 1rem;
     border: .1rem solid rgba(0, 0, 0, .3);
     color: #333;
-    font-size: 2rem;
+    font-size: 18px;
     text-transform: none;
 }
 
@@ -69,8 +66,8 @@ html {
     width: 8rem;
     height: 100%;
     background-color: var(--green);
-    font-size: 2.5rem;
-    line-height: 5rem;
+    font-size: 1.5rem;
+    line-height: 3rem;
     color: #fff;
     cursor: pointer;
     text-align: center;
@@ -84,10 +81,11 @@ html {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2rem 9%;
+    padding: 1.5rem 9%;
     box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 10%);
     background-color: #fff;
     position: relative;
+    z-index: 99;
 }
 
 .header-2.active {
@@ -99,7 +97,7 @@ html {
 
 .header-2 .navbar a {
     padding: .5rem 1.5rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--black);
     border-radius: .5rem;
     text-decoration: none;
@@ -111,10 +109,23 @@ html {
 }
 
 .header-2 .icons a {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: var(--black);
-    padding-left: 1rem;
+    padding-right: 1rem;
     text-decoration: none;
+}
+
+.header-2 .icons .btn {
+    padding: .5rem 1.5rem;
+    font-size: 1.5rem;
+    color: var(--black);
+    border-radius: .5rem;
+    text-decoration: none;
+}
+
+.header-2 .icons .btn:hover {
+    color: #fff;
+    background-color: var(--green);
 }
 
 .header-2 .icons a:hover {
