@@ -51,6 +51,10 @@ include '../components/newNav.php';
     </form>
 </div>
 
+<?php
+include '../components/footerNew.php';
+?>
+
 <script>
     var check = function() {
 

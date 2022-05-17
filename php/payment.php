@@ -91,3 +91,7 @@ if ($_SERVER["REQUEST_METHOD"] != "POST" || !isset($_POST['itemid'])) {
     </div>
   </div>
 </div>
+
+<?php
+include './components/footerNew.php';
+?>

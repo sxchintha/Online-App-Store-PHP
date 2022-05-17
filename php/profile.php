@@ -30,7 +30,7 @@ if (!isset($_SESSION["loggedin"]) && !$_SESSION["loggedin"] === true && empty($_
         ';
     }
     ?>
-    
+
     <div class="button-center">
         <button class="tablinks" onclick="openTab(event,'mydownloads')" id="defaultOpen">Downloads</button>
     </div>
@@ -49,6 +49,10 @@ if (!isset($_SESSION["loggedin"]) && !$_SESSION["loggedin"] === true && empty($_
 </div>
 
 <div id="mydownloads" class="tabcontent"></div>
+
+<?php
+include './components/footerNew.php';
+?>
 
 
 <script>

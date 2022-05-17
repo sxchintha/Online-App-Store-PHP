@@ -23,3 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && !empty($_GET['search'])) {
 }
     ?>
     </section>
+
+    <?php
+    include './components/footerNew.php';
+    ?>

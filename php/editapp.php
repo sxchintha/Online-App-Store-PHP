@@ -125,6 +125,10 @@ if ($result->num_rows == 1) {
 }
 ?>
 
+<?php
+include './components/footerNew.php';
+?>
+
 <script>
     function setFree() {
         document.getElementById("appprice").disabled = true;
@@ -139,7 +143,7 @@ if ($result->num_rows == 1) {
     var category = document.getElementById('category')
     var language = document.getElementById('language')
     var des = document.getElementById('description')
- 
+
     if (<?php echo $app['price'] ?> == 0) {
         document.getElementById("freeradio").checked = true;
         document.getElementById("appprice").disabled = true;

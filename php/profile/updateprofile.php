@@ -19,7 +19,7 @@ include '../components/newNav.php';
                 <label for="First Name">First Name:</label>
             </div>
             <div class="col-75">
-                <input type="text" id="fname" name="fname" placeholder="Your  first name.." required value="<?php echo $_SESSION['fname'] ?>"/>
+                <input type="text" id="fname" name="fname" placeholder="Your  first name.." required value="<?php echo $_SESSION['fname'] ?>" />
             </div>
         </div>
         <div class="row">
@@ -27,7 +27,7 @@ include '../components/newNav.php';
                 <label for="Last Name">Last Name:</label>
             </div>
             <div class="col-75">
-                <input type="text" id="lname" name="lname" placeholder="Your last name.." required value="<?php echo $_SESSION['lname'] ?>"/>
+                <input type="text" id="lname" name="lname" placeholder="Your last name.." required value="<?php echo $_SESSION['lname'] ?>" />
             </div>
         </div>
         <div class="row">
@@ -35,7 +35,7 @@ include '../components/newNav.php';
                 <label for="Email">Email:</label>
             </div>
             <div class="col-75">
-                <input type="email" id="email" name="email" placeholder="Your email.." required value="<?php echo $_SESSION['email'] ?>"/>
+                <input type="email" id="email" name="email" placeholder="Your email.." required value="<?php echo $_SESSION['email'] ?>" />
             </div>
         </div>
         <div class="row">
@@ -43,7 +43,7 @@ include '../components/newNav.php';
                 <label for="Contact">Contact No:</label>
             </div>
             <div class="col-75">
-                <input type="tel" id="contact" name="contact" placeholder="Contact No.." pattern="[0-9]{10}" value="<?php echo $_SESSION['contact'] ?>"/>
+                <input type="tel" id="contact" name="contact" placeholder="Contact No.." pattern="[0-9]{10}" value="<?php echo $_SESSION['contact'] ?>" />
             </div>
         </div>
 
@@ -58,3 +58,7 @@ include '../components/newNav.php';
         </div>
     </form>
 </div>
+
+<?php
+include '../components/footerNew.php';
+?>
