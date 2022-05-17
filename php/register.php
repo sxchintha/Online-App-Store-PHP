@@ -25,6 +25,11 @@ include './components/newNav.php';
     include './developer/register.php'
     ?>
 </div>
+
+<?php
+include './components/footerNew.php';
+?>
+
 <script>
     function openForm(evt, formName) {
         var i, tabcontent, tablinks;

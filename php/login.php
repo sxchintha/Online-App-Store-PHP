@@ -42,6 +42,10 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true && !empty($_S
     </div>
 </div>
 
+<?php
+include './components/footerNew.php';
+?>
+
 <script>
     function openForm(evt, formName) {
         var i, tabcontent, tablinks;

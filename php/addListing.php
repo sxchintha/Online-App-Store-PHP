@@ -58,9 +58,9 @@ include './components/newNav.php';
           <option value="Sinhala">Sinhala</option>
         </select><br /><br />
         <label for="Price">Price</label><br>
-        <input type="radio" id="freeradio" name="price" value="free"  onchange="setFree()"><label for="pric" checked>Free</label>
+        <input type="radio" id="freeradio" name="price" value="free" onchange="setFree()"><label for="pric" checked>Free</label>
         <input type="radio" id="paidradio" name="price" value="paid" onchange="setPrice()"><label for="pric">Paid</label>
-        <input type="number" id="appprice" name="appprice" required class="title-box" value="0" >
+        <input type="number" id="appprice" name="appprice" required class="title-box" value="0">
         <br><br>
         <label>Image</label><br />
         <input type="file" id="imageToUpload" name="imageToUpload" required /><br /><br />
@@ -111,7 +111,12 @@ include './components/newNav.php';
   function setFree() {
     document.getElementById("appprice").disabled = true;
   }
+
   function setPrice() {
     document.getElementById("appprice").disabled = false;
   }
 </script>
+
+<?php
+include './components/footerNew.php';
+?>
