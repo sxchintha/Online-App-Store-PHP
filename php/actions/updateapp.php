@@ -47,6 +47,6 @@ if (mysqli_query($con, $sql)) {
     echo "<script>window.location.href = '../profile.php';</script>";
 } else {
     echo "<script> alert ('Error! Please try again.');</script>";
-    // echo "<script> history.back(); </script>";
+    echo "<script> history.back(); </script>";
 }
 mysqli_close($con);

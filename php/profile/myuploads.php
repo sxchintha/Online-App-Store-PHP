@@ -16,3 +16,14 @@ $myapps = mysqli_query($con, $mysql);
 while ($app = $myapps->fetch_assoc()) {
     include './components/myUploadCard.php';
 }
+
+?>
+
+<script>
+    function deleteFunc(id) {
+        let text = "Delete application?";
+        if (confirm(text) == true) {
+            window.location.href = './actions/deleteapp.php?itemid=' + id
+        }
+    }
+</script>
