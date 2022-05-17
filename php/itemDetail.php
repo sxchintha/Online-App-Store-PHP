@@ -128,8 +128,7 @@
               WHERE appid = $itemid;";
 
   $reviews = mysqli_query($con, $reviewsql);
-  ?>
- <?php
+
   while ($review = $reviews->fetch_assoc()) {
     $reviewerid = $review['userid'];
     if ($review['userrole'] == 'user') {

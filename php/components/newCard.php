@@ -4,7 +4,7 @@
   ?>
 </style>
 
-<a href="/store/online-app-store-php/php/itemDetail.php?itemid=<?php echo $app['idapp'] ?>">
+<a href="/store/online-app-store-php/php/newProductDetails.php?itemid=<?php echo $app['idapp'] ?>">
   <article class="card">
     <figure class="card-img">
       <img src="./uploads/images/<?php echo $app['imagename'] ?>" />

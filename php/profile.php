@@ -21,22 +21,20 @@ if (!isset($_SESSION["loggedin"]) && !$_SESSION["loggedin"] === true && empty($_
     <?php
     if ($_SESSION['role'] === 'developer') {
         echo '
-            <a href="addListing.php" class="button-center">Add New</a>
+            <div class="button-center">
+                <button class="tablinks" onclick="document.location=' . "'addListing.php'" . '">Add New</button>
+            </div>
             <div class="button-center">
                 <button class="tablinks" onclick="openTab(event,' . "'myuploads'" . ')" id="defaultOpen">My Uploads</button>
-            </div>
-        ';
-    } else {
-        echo '
-            <div class="button-center">
-                <button class="tablinks" onclick="openTab(event,' . "'mydownloads'" . ')" id="defaultOpen">Downloads</button>
             </div>
         ';
     }
 
 
     ?>
-
+    <div class="button-center">
+        <button class="tablinks" onclick="openTab(event,'mydownloads')" id="defaultOpen">Downloads</button>
+    </div>
     <div class="button-center">
         <button class="tablinks" onclick="openTab(event, 'updateprofile')">Update Profile</button>
     </div>
@@ -45,17 +43,23 @@ if (!isset($_SESSION["loggedin"]) && !$_SESSION["loggedin"] === true && empty($_
     </div>
 </div>
 
-<div id="myuploads" class="tabcontent"></div>
+<div id="myuploads" class="tabcontent">
+    <?php
+    include './profile/myuploads.php';
+    ?>
+</div>
 
 <div id="mydownloads" class="tabcontent"></div>
 
-<div id="updateprofile" class="tabcontent"></div>
+<div id="updateprofile" class="tabcontent">
+</div>
 
-<div id="changepass" class="tabcontent"></div>
+<div id="changepass" class="tabcontent">
+</div>
 
 
 <script>
-    function openTab(evt, cityName) {
+    function openTab(evt, tabName) {
         var i, tabcontent, tablinks;
         tabcontent = document.getElementsByClassName("tabcontent");
         for (i = 0; i < tabcontent.length; i++) {
@@ -65,7 +69,7 @@ if (!isset($_SESSION["loggedin"]) && !$_SESSION["loggedin"] === true && empty($_
         for (i = 0; i < tablinks.length; i++) {
             tablinks[i].className = tablinks[i].className.replace(" active", "");
         }
-        document.getElementById(cityName).style.display = "block";
+        document.getElementById(tabName).style.display = "block";
         evt.currentTarget.className += " active";
     }
 
