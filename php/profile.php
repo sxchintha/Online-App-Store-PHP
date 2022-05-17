@@ -36,7 +36,7 @@ if (!isset($_SESSION["loggedin"]) && !$_SESSION["loggedin"] === true && empty($_
         <button class="tablinks" onclick="openTab(event,'mydownloads')" id="defaultOpen">Downloads</button>
     </div>
     <div class="button-center">
-        <button class="tablinks" onclick="openTab(event, 'updateprofile')">Update Profile</button>
+        <button class="tablinks" onclick="document.location='./profile/updateprofile.php'">Update Profile</button>
     </div>
     <div class="button-center">
         <button class="tablinks" onclick="openTab(event, 'changepass')">Change Password</button>
@@ -50,12 +50,6 @@ if (!isset($_SESSION["loggedin"]) && !$_SESSION["loggedin"] === true && empty($_
 </div>
 
 <div id="mydownloads" class="tabcontent"></div>
-
-<div id="updateprofile" class="tabcontent">
-</div>
-
-<div id="changepass" class="tabcontent">
-</div>
 
 
 <script>
