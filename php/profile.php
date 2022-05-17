@@ -32,9 +32,6 @@ if (!isset($_SESSION["loggedin"]) && !$_SESSION["loggedin"] === true && empty($_
     ?>
 
     <div class="button-center">
-        <button class="tablinks" onclick="openTab(event,'mydownloads')" id="defaultOpen">Downloads</button>
-    </div>
-    <div class="button-center">
         <button class="tablinks" onclick="document.location='./profile/updateprofile.php'">Update Profile</button>
     </div>
     <div class="button-center">
@@ -42,13 +39,11 @@ if (!isset($_SESSION["loggedin"]) && !$_SESSION["loggedin"] === true && empty($_
     </div>
 </div>
 
-<div id="myuploads" class="tabcontent">
+<div id="myuploads" class="tabcontent" style="display: none;">
     <?php
     include './profile/myuploads.php';
     ?>
 </div>
-
-<div id="mydownloads" class="tabcontent"></div>
 
 <?php
 include './components/footerNew.php';
@@ -69,7 +64,4 @@ include './components/footerNew.php';
         document.getElementById(tabName).style.display = "block";
         evt.currentTarget.className += " active";
     }
-
-    // Get the element with id="defaultOpen" and click on it
-    document.getElementById("defaultOpen").click();
 </script>
