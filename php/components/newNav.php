@@ -11,9 +11,11 @@
   <div class="header-1">
     <a href="/store/online-app-store-php/" class="logo"><i class="fas fa-store"></i>KLICK STORE</a>
 
-    <form action="" class="search-box-container">
-      <input type="search" id="search-box" placeholder="Search here..." />
-      <label for="search-box" class="fas fa-search"></label>
+    <form action="/store/online-app-store-php/php/search.php" class="search-box-container">
+      <input type="search" name="search" id="search-box" placeholder="Search here..." />
+      <button style="border: 0px; padding: 0px; margin: 0px;">
+        <label for="search-box" class="fas fa-search"></label>
+      </button>
     </form>
   </div>
 
