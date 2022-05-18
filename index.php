@@ -58,7 +58,7 @@ $recommendeds = mysqli_query($con, $recommendedsql);
         ?>
     </section>
     <br>
-
+    <img src="img/Slides/banner.jpg" alt="">
     <h1>Recommended for you</h1>
     <section>
         <?php

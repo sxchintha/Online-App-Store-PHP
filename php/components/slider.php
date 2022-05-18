@@ -9,8 +9,8 @@
         <img class="slider-image" src="img/Slides/slide1.jpg" alt />
         <img class="slider-image" src="img/Slides/slide2.jpg" alt />
         <img class="slider-image" src="img/Slides/slide3.jpg" alt />
-        <img class="slider-image" src="img/Slides/slide3.jpg" alt />
-        <img class="slider-image" src="img/Slides/slide3.jpg" alt />
+        <img class="slider-image" src="img/Slides/slide4.jpg" alt />
+        <img class="slider-image" src="img/Slides/slide1.jpg" alt />
         <!-- <img class="slider-image" src="ankor-wat.jpg" alt />
         <img class="slider-image" src="austin-fireworks.jpg" alt /> -->
       </figure>
