@@ -103,6 +103,7 @@ include './components/newNav.php';
     <button class="publish-button">Publish</button>
   </div>
 </form>
+<br>
 
 <script>
   var freebtn = document.getElementById('freeradio').checked

@@ -45,9 +45,7 @@ if (!isset($_SESSION["loggedin"]) && !$_SESSION["loggedin"] === true && empty($_
     ?>
 </div>
 
-<?php
-include './components/footerNew.php';
-?>
+
 
 
 <script>
@@ -65,3 +63,5 @@ include './components/footerNew.php';
         evt.currentTarget.className += " active";
     }
 </script>
+
+

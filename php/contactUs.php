@@ -9,12 +9,13 @@ include './components/newNav.php';
   ?>
 </style>
 
-
+<br>
 <h1 class="contact-heading">Help and Contact</h1>
+
 <div class="search">
   <div class="wrapper">
     <input type="text" class="input" placeholder="What are you looking for?" />
-    <div class="searchbtn"><i class="fas fa-search"></i></div>
+    <div class="searchbtn"><i class=" faaa fas fa-search"></i></div>
   </div>
 </div>
 <div class="allCards">
@@ -68,6 +69,8 @@ include './components/newNav.php';
 <div class="button-div">
   <p class="btnP"><a href="#" class="btnn anim">Chat With Us</a></p>
 </div>
+<br>
+<br>
 
 <?php
 include './components/footerNew.php';
