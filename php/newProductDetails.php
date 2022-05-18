@@ -158,6 +158,7 @@ if ($result->num_rows == 1) {
       $userdetails = $con->query($usersql);
       $user = $userdetails->fetch_assoc();
     ?>
+    <div style="overflow-y: scroll; height:400px;">
       <div class="Rcard">
         <h3><?php echo $review['subject']; ?></h3>
         <h4>by - <?php echo $user['fname'] . ' ' . $user['lname'] ?></h4>
@@ -165,9 +166,11 @@ if ($result->num_rows == 1) {
         <h4>Rating: <?php echo $review['rating'] ?></h4>
         <h4>Comment: <?php echo $review['comment'] ?></h4>
       </div>
+      <br>
     <?php
     }
     ?>
+  </div>
   </div>
 <?php } else {
   echo "<script>window.location.href = './404.php';</script>";

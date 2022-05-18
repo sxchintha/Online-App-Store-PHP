@@ -12,6 +12,8 @@ include '../components/newNav.php';
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <div class="container" style="width: 70%;">
+<br>
+<br>
     <h2 class="user-form-title">Update profile details</h2><br />
     <form action="../actions/changePass.php" method="POST" name="registerForm">
         <div class="row">
@@ -49,6 +51,9 @@ include '../components/newNav.php';
 
         </div>
     </form>
+    <br>
+    <br>
+    <br>
 </div>
 
 <?php

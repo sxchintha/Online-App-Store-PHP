@@ -36,11 +36,11 @@
 
       <nav class="navbar" id="navbar">
         <a href="/store/online-app-store-php/">Home</a>
-        <a href="#home">Communication</a>
-        <a href="#home">Banking</a>
-        <a href="#home">Game</a>
-        <a href="#home">Productivity</a>
-        <a href="#home">Contact Us</a>
+        <a href="/store/online-app-store-php/php/search.php?search=communication">Communication</a>
+        <a href="/store/online-app-store-php/php/search.php?search=banking">Banking</a>
+        <a href="/store/online-app-store-php/php/search.php?search=game">Game</a>
+        <a href="/store/online-app-store-php/php/search.php?search=productivity">Productivity</a>
+        <a href="/store/online-app-store-php/contactUs.php">Contact Us</a>
       </nav>
       <!-- login/profile button -->
       <div class="icons">

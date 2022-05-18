@@ -43,8 +43,8 @@ $recommendeds = mysqli_query($con, $recommendedsql);
     <?php
     include './php/components/slider.php'
     ?>
-
-    <h1 class="index-header">New + Update</h1>
+<a href="/store/online-app-store-php/">
+    <h1 class="index-header">New + Update</h1></a>
   
     <section>
         <?php
@@ -54,8 +54,9 @@ $recommendeds = mysqli_query($con, $recommendedsql);
         ?>
     </section>
     <br>
-
+        <a href="/store/online-app-store-php/">
     <h1 class="index-header">Social Networks</h1>
+</a>
     <section>
         <?php
         while ($app = $socialapps->fetch_assoc()) {
@@ -64,8 +65,10 @@ $recommendeds = mysqli_query($con, $recommendedsql);
         ?>
     </section>
     <br>
-    <img src="img/Slides/banner.jpg" alt="">
+    <img src="img/Slides/banner.jpg" alt="" class="index-banner">
+     <a href="/store/online-app-store-php/">
     <h1 class="index-header" >Recommended for you</h1>
+    </a>
     <section>
         <?php
         while ($app = $recommendeds->fetch_assoc()) {
