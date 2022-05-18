@@ -57,6 +57,9 @@ include '../components/newNav.php';
 
         </div>
     </form>
+    <br>
+    <br>
+    <br>
 </div>
 
 <?php

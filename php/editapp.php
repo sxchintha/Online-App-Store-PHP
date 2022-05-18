@@ -118,6 +118,8 @@ if ($result->num_rows == 1) {
             <button class="publish-button">Publish</button>
         </div>
     </form>
+    <br>
+    <br>
 <?php
 } else {
     echo "<script> alert ('Access denied!'); </script>";

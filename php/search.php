@@ -6,9 +6,10 @@ require './db/config.php';
 if ($_SERVER["REQUEST_METHOD"] == "GET" && !empty($_GET['search'])) {
     $search = trim($_GET['search']);
 
-    $sql = "SELECT idapp, title, imagename, stars, ratecount
+     $sql = "SELECT idapp, title, imagename, stars, ratecount
             FROM app
-            WHERE title LIKE '%" . $search . "%'";
+            WHERE title LIKE '%" . $search . "%'
+            OR category LIKE '%" . $search . "%'";
 
     $apps = mysqli_query($con, $sql);
 ?>
