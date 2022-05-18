@@ -35,11 +35,12 @@
       <div id="menu-bar" class="fas fa-bars"></div>
 
       <nav class="navbar" id="navbar">
-        <a href="/store/online-app-store-php/">home</a>
-        <a href="#home">category</a>
-        <a href="#home">product</a>
-        <a href="#home">deal</a>
-        <a href="#home">contact</a>
+        <a href="/store/online-app-store-php/">Home</a>
+        <a href="#home">Communication</a>
+        <a href="#home">Banking</a>
+        <a href="#home">Game</a>
+        <a href="#home">Productivity</a>
+        <a href="#home">Contact Us</a>
       </nav>
       <!-- login/profile button -->
       <div class="icons">
