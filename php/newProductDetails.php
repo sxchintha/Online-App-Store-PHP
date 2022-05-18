@@ -33,18 +33,18 @@ if ($result->num_rows == 1) {
     <main class="container">
       <div class="left-column">
         <section>
-          
-            <article class="card">
-              <figure class="card-img">
-                <img src="../uploads/images/<?php echo $app['imagename'] ?>" />
-                <figcaption>Downloads : <?php echo $app['downloads'] ?></figcaption>
-              </figure>
-              <div class="card-body">
-                <h2 class="card-title"><?php echo $app['title'] ?></h2>
-                <a href="./reviewForm.php?itemid=<?php echo $itemid ?>" class="edit-button">Rate app</a>
-              </div>
-            </article>
-         
+
+          <article class="card">
+            <figure class="card-img">
+              <img src="../uploads/images/<?php echo $app['imagename'] ?>" />
+              <figcaption>Downloads : <?php echo $app['downloads'] ?></figcaption>
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title"><?php echo $app['title'] ?></h2>
+              <a href="./reviewForm.php?itemid=<?php echo $itemid ?>" class="edit-button">Rate app</a>
+            </div>
+          </article>
+
         </section>
       </div>
 
@@ -173,3 +173,7 @@ if ($result->num_rows == 1) {
   echo "<script>window.location.href = './404.php';</script>";
   exit;
 } ?>
+
+<?php
+include './components/footerNew.php';
+?>

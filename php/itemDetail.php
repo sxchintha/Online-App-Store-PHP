@@ -152,3 +152,7 @@
  <?php
   }
   ?>
+
+ <?php
+include './components/footerNew.php';
+  ?>

@@ -37,7 +37,7 @@ a:hover {
 /* Sticks footer to bottom */
 .footer-body {
     display: flex;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     flex-direction: column;
     font-family: 'Poppins', sans-serif;
    

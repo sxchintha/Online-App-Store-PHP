@@ -305,3 +305,7 @@ if (!isset($_SESSION["loggedin"]) && !$_SESSION["loggedin"] === true && empty($_
     </div>
   </div>
 </div>
+
+<?php
+include './components/footerNew.php';
+?>

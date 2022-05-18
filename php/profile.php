@@ -29,33 +29,25 @@ if (!isset($_SESSION["loggedin"]) && !$_SESSION["loggedin"] === true && empty($_
             </div>
         ';
     }
-
-
     ?>
+
     <div class="button-center">
-        <button class="tablinks" onclick="openTab(event,'mydownloads')" id="defaultOpen">Downloads</button>
+        <button class="tablinks" onclick="document.location='./profile/updateprofile.php'">Update Profile</button>
     </div>
     <div class="button-center">
-        <button class="tablinks" onclick="openTab(event, 'updateprofile')">Update Profile</button>
-    </div>
-    <div class="button-center">
-        <button class="tablinks" onclick="openTab(event, 'changepass')">Change Password</button>
+        <button class="tablinks" onclick="document.location='./profile/changePass.php'">Change Password</button>
     </div>
 </div>
 
-<div id="myuploads" class="tabcontent">
+<div id="myuploads" class="tabcontent" style="display: none;">
     <?php
     include './profile/myuploads.php';
     ?>
 </div>
 
-<div id="mydownloads" class="tabcontent"></div>
-
-<div id="updateprofile" class="tabcontent">
-</div>
-
-<div id="changepass" class="tabcontent">
-</div>
+<?php
+include './components/footerNew.php';
+?>
 
 
 <script>
@@ -72,7 +64,4 @@ if (!isset($_SESSION["loggedin"]) && !$_SESSION["loggedin"] === true && empty($_
         document.getElementById(tabName).style.display = "block";
         evt.currentTarget.className += " active";
     }
-
-    // Get the element with id="defaultOpen" and click on it
-    document.getElementById("defaultOpen").click();
 </script>
