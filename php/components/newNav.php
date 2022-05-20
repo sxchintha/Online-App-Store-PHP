@@ -40,7 +40,7 @@
         <a href="/store/online-app-store-php/php/search.php?search=banking">Banking</a>
         <a href="/store/online-app-store-php/php/search.php?search=game">Game</a>
         <a href="/store/online-app-store-php/php/search.php?search=productivity">Productivity</a>
-        <a href="/store/online-app-store-php/contactUs.php">Contact Us</a>
+        <a href="/store/online-app-store-php/php/contactUs.php">Contact Us</a>
       </nav>
       <!-- login/profile button -->
       <div class="icons">
@@ -48,11 +48,11 @@
         if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true && !empty($_SESSION["SID"])) {
           echo '
             <a href="/store/online-app-store-php/php/profile.php" class="fas fa-user-circle"></a>
-            <a href="/store/online-app-store-php/php/actions/logout.php" class="btn">Logout</a>
+            <a href="/store/online-app-store-php/php/actions/logout.php" class="btna">Logout</a>
             ';
         } else {
           echo '
-            <a href="/store/online-app-store-php/php/login.php" class="btn">login</a>
+            <a href="/store/online-app-store-php/php/login.php" class="btna">login</a>
             ';
         }
         ?>
@@ -75,7 +75,7 @@
       menu.classList.remove('fa-times');
       navbar.classList.remove('active');
 
-      if (window.scrollY > 100) {
+      if (window.scrollY > 0) {
         header.classList.add('active');
       } else {
         header.classList.remove('active');

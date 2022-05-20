@@ -34,18 +34,25 @@ $recommendeds = mysqli_query($con, $recommendedsql);
 
 ?>
 <style>
-  <?php
-  include $_SERVER['DOCUMENT_ROOT'] . '/store/online-app-store-php/css/index.css';
-  ?>
+    .checked {
+        color: orange;
+    }
+
+    <?php
+    include $_SERVER['DOCUMENT_ROOT'] . '/store/online-app-store-php/css/index.css';
+    include $_SERVER['DOCUMENT_ROOT'] . '/store/online-app-store-php/css/newCard.css';
+    ?>
 </style>
 
 <body>
     <?php
     include './php/components/slider.php'
     ?>
-<a href="/store/online-app-store-php/">
-    <h1 class="index-header">New + Update</h1></a>
-  
+
+    <a href="/store/online-app-store-php/php/search.php?search=newupdate">
+        <h1 class="index-header">New + Update</h1>
+    </a>
+
     <section>
         <?php
         while ($app = $newapps->fetch_assoc()) {
@@ -54,9 +61,9 @@ $recommendeds = mysqli_query($con, $recommendedsql);
         ?>
     </section>
     <br>
-        <a href="/store/online-app-store-php/">
-    <h1 class="index-header">Social Networks</h1>
-</a>
+    <a href="/store/online-app-store-php/php/search.php?search=communication">
+        <h1 class="index-header">Social Networks</h1>
+    </a>
     <section>
         <?php
         while ($app = $socialapps->fetch_assoc()) {
@@ -66,8 +73,8 @@ $recommendeds = mysqli_query($con, $recommendedsql);
     </section>
     <br>
     <img src="img/Slides/banner.jpg" alt="" class="index-banner">
-     <a href="/store/online-app-store-php/">
-    <h1 class="index-header" >Recommended for you</h1>
+    <a href="/store/online-app-store-php/php/search.php?search=recomended">
+        <h1 class="index-header">Recommended for you</h1>
     </a>
     <section>
         <?php

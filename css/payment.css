@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Acme&family=Fredoka+One&family=Poppins:wght@200&family=Righteous&family=Road+Rage&family=Roboto&display=swap');
 
-.body {
+/* .body {
     padding: 8px;
     font-family: "Poppins", sans-serif;
-}
+} */
 
 .Rcard {
     border-radius: 16px;
@@ -20,9 +20,9 @@
     margin-bottom: 0px;
 }
 
-* {
+/* * {
     box-sizing: border-box;
-}
+} */
 
 .row {
     display: -ms-flexbox;
@@ -59,7 +59,7 @@
 }
 
 .container {
-    background-color: #f2f2f2;
+    /* background-color: #f2f2f2; */
     padding: 5px 20px 15px 20px;
     border: 1px solid lightgrey;
     border-radius: 3px;

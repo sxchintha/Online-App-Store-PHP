@@ -39,7 +39,7 @@
                 <label for="Password">Password:</label>
             </div>
             <div class="col-75">
-                <input type="password" id="password" name="password" placeholder="Your password.." required onkeyup='check();' />
+                <input type="password" id="password" name="password" placeholder="Your password.." required onkeyup='ucheck();' />
             </div>
         </div>
         <div class="row">
@@ -47,7 +47,7 @@
                 <label for="Confirm Password">Confirm Password:</label><i id="checkPassIcon"></i>
             </div>
             <div class="col-75">
-                <input type="password" id="cpassword" name="cpassword" placeholder="Enter password again.." required onkeyup='check();' />
+                <input type="password" id="cpassword" name="cpassword" placeholder="Enter password again.." required onkeyup='ucheck();' />
             </div>
         </div>
         <div class="row">
@@ -103,7 +103,7 @@
 </div>
 
 <script>
-    var check = function() {
+    var ucheck = function() {
 
         let password = document.getElementById('password')
         let cpassword = document.getElementById('cpassword')

@@ -35,7 +35,7 @@ if ($result->num_rows == 1) {
 
     if (mysqli_multi_query($con, $addsql)) {
         echo "<script> alert ('Review successfully added.');</script>";
-        echo "<script>window.location.href = '../itemDetail.php?itemid=$itemid';</script>";
+        echo "<script>window.location.href = '../newProductDetails.php?itemid=$itemid';</script>";
     } else {
         echo "<script> alert ('Error! Please try again.'); </script>";
         echo "<script> history.back(); </script>";

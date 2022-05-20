@@ -42,7 +42,7 @@ $imagename = $_FILES['imageToUpload']['name'];
 $fileExtention = pathinfo($filename, PATHINFO_EXTENSION);
 $imageExtention = pathinfo($imagename, PATHINFO_EXTENSION);
 
-if (!in_array($imageExtention, ['jpg', 'jpeg', 'png', 'webp'])) {
+if (!in_array($imageExtention, ['jpg', 'jpeg', 'png', 'webp', 'svg'])) {
     echo "<script> alert ('Image extension must be .jpg, .webp or .png'); </script>";
     echo "<script> history.back(); </script>";
 } elseif (!in_array($fileExtention, ['zip', 'exe'])) {

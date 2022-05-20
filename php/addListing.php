@@ -22,7 +22,7 @@ include './components/newNav.php';
         </div>
         <div class="col-75">
           <select name="applicationtype" id="applicationtype" required>
-            <option value="" disabled selected hidden>Choose type</option>
+            <option value="" disabled selected hidden>Choose...</option>
             <option value="PC">PC</option>
             <option value="Mobile">Mobile</option>
           </select>
@@ -34,7 +34,7 @@ include './components/newNav.php';
         </div>
         <div class="col-75">
           <select name="category" id="category" required>
-            <option value="" disabled selected hidden>Choose category</option>
+            <option value="" disabled selected hidden>Choose...</option>
             <option value="Banking">Banking</option>
             <option value="Communication">Communication</option>
             <option value="Game">Game</option>
@@ -97,10 +97,10 @@ include './components/newNav.php';
         </div>
       </div>
     </div>
-  </div>
-  <br />
-  <div class="center">
-    <button class="publish-button">Publish</button>
+    <br />
+    <div class="center">
+      <button class="publish-button">Publish</button>
+    </div>
   </div>
 </form>
 <br>

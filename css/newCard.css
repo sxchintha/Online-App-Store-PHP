@@ -51,6 +51,7 @@ section {
 
 .card:hover {
     transform: translateY(-0.5rem);
+    text-decoration: none;
 }
 
 .card-img {
@@ -82,4 +83,13 @@ section {
 .card-title {
     text-transform: capitalize;
     margin: 0.75rem 0;
+    text-decoration: none;
+}
+
+.anoline {
+    text-decoration: none;
+}
+
+.anoline:hover {
+    text-decoration: none;
 }
