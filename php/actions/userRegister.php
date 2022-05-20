@@ -18,7 +18,6 @@ $email = $_POST['email'];
 $password = $_POST['password'];
 $cpassword = $_POST['cpassword'];
 
-
 // Check for duplicate email or password
 $chkDuplicateEmail = mysqli_query($con, "select * from customer where email='$email' ");
 $chkDuplicateContact = mysqli_query($con, "select * from customer where contact='$contact' ");

@@ -11,6 +11,7 @@ if (!isset($_SESSION["loggedin"]) && !$_SESSION["loggedin"] === true && empty($_
 <style>
     <?php
     include $_SERVER['DOCUMENT_ROOT'] . '/store/online-app-store-php/css/profile.css';
+    include $_SERVER['DOCUMENT_ROOT'] . '/store/online-app-store-php/css/myUploadCard.css';
     ?>
 </style>
 <br>
@@ -45,9 +46,6 @@ if (!isset($_SESSION["loggedin"]) && !$_SESSION["loggedin"] === true && empty($_
     ?>
 </div>
 
-
-
-
 <script>
     function openTab(evt, tabName) {
         var i, tabcontent, tablinks;
@@ -63,5 +61,3 @@ if (!isset($_SESSION["loggedin"]) && !$_SESSION["loggedin"] === true && empty($_
         evt.currentTarget.className += " active";
     }
 </script>
-
-

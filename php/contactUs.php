@@ -12,7 +12,7 @@ include './components/newNav.php';
 <br>
 <h1 class="contact-heading">Help and Contact</h1>
 
-<div class="search">
+<div class="searchr">
   <div class="wrapper">
     <input type="text" class="input" placeholder="What are you looking for?" />
     <div class="searchbtn"><i class=" faaa fas fa-search"></i></div>

@@ -115,7 +115,7 @@
     text-decoration: none;
 }
 
-.header-2 .icons .btn {
+.header-2 .icons .btna {
     padding: .5rem 1.5rem;
     font-size: 1.3rem;
     color: var(--black);
@@ -123,7 +123,7 @@
     text-decoration: none;
 }
 
-.header-2 .icons .btn:hover {
+.header-2 .icons .btna:hover {
     color: #fff;
     background-color: var(--green);
 }

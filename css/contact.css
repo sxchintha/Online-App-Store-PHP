@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Comfortaa');
 @import url('https://fonts.googleapis.com/css2?family=Acme&family=Fredoka+One&family=Montserrat&family=Oswald&family=Poppins:wght@200&family=Righteous&family=Road+Rage&display=swap');
 
-.search {
+.searchr {
     margin: 0;
     padding: 0;
     outline: none;
@@ -13,7 +13,7 @@
 
 .wrapper {
     position: absolute;
-    top: 50%;
+    top: 300px;
     left: 50%;
     transform: translate(-50%, -50%);
     background: rgba(0, 0, 0, 0.6);
@@ -51,7 +51,7 @@
 }
 
 
-.allCards{
+.allCards {
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -67,7 +67,7 @@
     padding: 0 10px;
     margin-top: 300px;
     margin-left: 80px;
-  
+
 }
 
 /* Remove extra left and right margins, due to padding */
@@ -95,19 +95,19 @@
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.341);
     padding: 16px;
-    
+
     background-color: #f1f1f1;
     border-radius: 10px;
 }
 
-.img{
+.img {
     border-radius: 10px;
     width: 100%;
     height: 300px;
     object-fit: cover;
 }
 
-.crd-title{
+.crd-title {
     font-family: 'Oswald', sans-serif;
     font-size: 40px;
     text-align: center;
@@ -139,7 +139,7 @@
     background: #002347;
     cursor: pointer;
     text-decoration: none;
-    
+
 }
 
 .anim {
@@ -166,12 +166,12 @@
     }
 }
 
-ul{
+ul {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding-left: 5px;
 }
 
-.contact-heading{
+.contact-heading {
     text-align: center;
-font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }

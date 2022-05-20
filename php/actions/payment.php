@@ -20,6 +20,7 @@ $zip = $_POST['zip'];
 $noc = $_POST['cardname']; // Name on card
 
 $userid = $_SESSION['SID'];
+$userrole = $_SESSION['role'];
 
 // Insert data
 $sql = "INSERT into payment(fullname, email, `address`, city, `state`, zip, nameoncard, userid, appid, userrole)
@@ -27,7 +28,7 @@ $sql = "INSERT into payment(fullname, email, `address`, city, `state`, zip, name
 
 if (mysqli_query($con, $sql)) {
     echo "<script> alert ('Payment successful.');</script>";
-    echo "<script>window.location.href = '../itemDetail.php?itemid=" . $itemid . "';</script>";
+    echo "<script>window.location.href = '../newProductDetails.php?itemid=" . $itemid . "';</script>";
 } else {
     echo "<script> alert ('Error! Payment cannot be made.');</script>";
     echo "<script> history.back(); </script>";
